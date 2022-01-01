@@ -16,7 +16,7 @@ struct Application {
         let portArgument = CommandLine.arguments.dropFirst().first
         let port = portArgument.flatMap(Int.init) ?? defaultPort
         
-        let logger = Logger(label: "com.abraham.athena.server")
+        let logger = Logger(label: "com.abraham.swiftniochat.server")
         let server = Server(logger: logger)
         do {
             let serverChannel = try await server.run(host: defaultHost, port: port)
